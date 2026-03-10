@@ -3,55 +3,39 @@ function changeContent(page) {
   switch (page) {
     case 'home':
       contentDiv.innerHTML = `
-        <img src=
-"https://agora.xtec.cat/iesvv/wp-content/uploads/usu1112/2025/02/40-anys-vinyes-velles-marro.png">
-        <h2>
-          Benvingut a la pàgina principal!
-        </h2>
+        <img src="heavy.png" alt="Heavy Soul">
+        <h2>Welcome to Heavy Soul!</h2>
         <p>
-          Aquesta és la pàgina principal.
+          This is the home page of the heaviest music hub on the web.
         </p>
         <p>
-          Explora les diferent seccions fent servir
-          el menu.
+          Use the menu above to navigate between sections.
         </p>
       `;
       break;
-    case 'about':
+    case 'news':
       contentDiv.innerHTML = `
-        <h2>Sobre </h2>
-        <p>
-          Està es la pàgina sobre la matèria. Apren
-          més coses en un altre lloc.
-        </p>
-        <p>
-          Ens agrada motivar-te a aprendre pel teu
-          compte.
-        </p>
+        <h2>Latest News</h2>
+        <ul>
+          <li>New album drop from The Dark Riders</li>
+          <li>Summer Steel Festival announces 2026 lineup</li>
+          <li>Exclusive interview with vocalist Raven Black</li>
+        </ul>
       `;
       break;
-    case 'contact':
-      contentDiv.innerHTML =
-        `<h2>Contacte</h2>
+    case 'followers':
+      contentDiv.innerHTML = `
+        <h2>From Our Followers</h2>
         <p>
-          Escriu-nos si tens dubtes!
+          We love hearing from you! Here are some messages and photos sent in by our fans.
         </p>
-        <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"
-            placeholder="Your Name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"
-            placeholder="Your Email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"
-              placeholder="Your Message"
-              rows="4" required>
-          </textarea>
-        <button type="submit">Send Message</button>
-        </form>`;
+        <ul>
+          <li>"Thanks for keeping the scene alive!" – Max</li>
+          <li>"Your site is pure fire." – Elena</li>
+          <li>"Rock on forever!" – The Steel Clan</li>
+        </ul>
+      `;
       break;
-
 
     default:
       contentDiv.innerHTML = '<h2>Page not found!</h2>';
