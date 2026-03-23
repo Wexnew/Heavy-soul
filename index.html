@@ -19,7 +19,7 @@
         <ul class="top-nav">
           <li><a href="#" onclick="changeContent('news')">NOTÍCIES</a></li>
           <li><a href="#" onclick="changeContent('contact')">CONTACTE</a></li>
-          <li><a href="#" onclick="changeContent('followers')">VÍDEOS DE SEGUIDORS</a></li>
+          <li><a href="#" onclick="changeContent('followers')">DELS NOSTRES SEGUIDORS</a></li>
         </ul>
       </nav>
     </header>
@@ -27,22 +27,24 @@
     <section class="home-hero">
       <div class="hero-card">
         <div class="hero-card-inner">
-          <button class="arrow left" aria-label="Anterior">&lt;</button>
+          <button class="arrow left" id="albums-prev" aria-label="Anterior">&lt;</button>
           <div class="hero-image" aria-hidden="true"></div>
-          <button class="arrow right" aria-label="Següent">&gt;</button>
+          <button class="arrow right" id="albums-next" aria-label="Següent">&gt;</button>
         </div>
         <h3>Àlbums de la setmana</h3>
       </div>
 
       <div class="hero-logo">
-        <img src="logo.png" alt="Heavy Soul logo">
+        <a href="#" onclick="changeContent('home'); return false;" style="cursor: pointer; display: inline-flex; align-items: center; justify-content: center;">
+          <img src="logo.png" alt="Heavy Soul logo" style="max-width: 100%; display: block;">
+        </a>
       </div>
 
       <div class="hero-card">
         <div class="hero-card-inner">
-          <button class="arrow left" aria-label="Anterior">&lt;</button>
+          <button class="arrow left" id="songs-prev" aria-label="Anterior">&lt;</button>
           <div class="hero-image" aria-hidden="true"></div>
-          <button class="arrow right" aria-label="Següent">&gt;</button>
+          <button class="arrow right" id="songs-next" aria-label="Següent">&gt;</button>
         </div>
         <h3>Noves cançons</h3>
       </div>

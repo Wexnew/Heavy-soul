@@ -1,16 +1,29 @@
+// Carrusel dels àlbums
+document.getElementById('albums-prev')?.addEventListener('click', () => {
+  // Carrusel de navegació
+});
+
+document.getElementById('albums-next')?.addEventListener('click', () => {
+  // Carrusel de navegació
+});
+
+// Carrusel de les cançons
+document.getElementById('songs-prev')?.addEventListener('click', () => {
+  // Carrusel de navegació
+});
+
+document.getElementById('songs-next')?.addEventListener('click', () => {
+  // Carrusel de navegació
+});
+
 function changeContent(page) {
   var contentDiv = document.getElementById('content');
   switch (page) {
     case 'home':
       contentDiv.innerHTML = `
-        <img src="logo.png" alt="Heavy Soul logo" id="main-logo">
-        <h2>Welcome to Heavy Soul!</h2>
-        <p>
-          This is the home page of the heaviest music hub on the web.
-        </p>
-        <p>
-          Use the menu above to navigate between sections.
-        </p>
+        <h2>Benvingut a Heavy Soul!</h2>
+        <p>Consulta les últimes notícies i articles del món de la música metal.</p>
+        <p>Utilitza el menú superior per navegar entre seccions.</p>
       `;
       break;
     case 'news':
@@ -23,21 +36,39 @@ function changeContent(page) {
         </ul>
       `;
       break;
-    case 'Followers':
+    case 'followers':
       contentDiv.innerHTML = `
-        <h2>From Our Followers</h2>
+        <h2>Dels Nostres Seguidors</h2>
         <p>
          Ens encanta rebre missatges dels nostres seguidors! Aquí teniu algunes de les últimes paraules d'ànim que hem rebut:
         </p>
         <ul>
           <li>"Gràcies per mantenir el metal viu!" – Max</li>
-          <li>"Me encanta aquesta web." – Elena</li>
-          <li>"Rock on forever!" – The Steel Clan</li>
+          <li>"M'encanta aquesta web." – Elena</li>
+          <li>"Rock for ever!" – The Steel Clan</li>
         </ul>
+      `;
+      break;
+    case 'contact':
+      contentDiv.innerHTML = `
+        <h2>Contacte</h2>
+        <p>Vols posar-te en contacte amb nosaltres? Aquí et deixem les nostres dades de contacte:</p>
+        <ul>
+          <li><strong>Correu electrònic:</strong> info@heavysoul.com</li>
+          <li><strong>Telèfon:</strong> +34 912 345 678</li>
+          <li><strong>Adreça:</strong> Av. De l'Onze de setembre, Montornés, Espanya</li>
+        </ul>
+        <p>També ens pots trobar a les nostres xarxes socials:</p>
+        <ul>
+          <li><strong>Instagram:</strong> @heavysoulmusic</li>
+          <li><strong>Facebook:</strong> Heavy Soul Official</li>
+          <li><strong>Twitter:</strong> @heavysoul_es</li>
+        </ul>
+        <p>No dubtis a escriure'ns, ¡ens encanta escoltar els nostres fans!</p>
       `;
       break;
 
     default:
-      contentDiv.innerHTML = '<h2>Page not found!</h2>';
+      contentDiv.innerHTML = '<h2>Pàgina no trobada!</h2>';
   }
 }
